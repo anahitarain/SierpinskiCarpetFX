@@ -6,7 +6,7 @@
 package sierpinskicarpetfx;
 
 import javafx.application.Application;
-import javafx.scene.Group;
+import javafx.scene.layout.Pane;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -20,7 +20,7 @@ public class SierpinskiCarpetFX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Group root = new Group();
+        Pane root = new Pane();
 
         drawCarpet(root, 0, 0, 600);
         Scene scene = new Scene(root);
@@ -30,7 +30,7 @@ public class SierpinskiCarpetFX extends Application {
         primaryStage.show();
     }
 
-    public static void drawCarpet(Group root, int x, int y, int side) {
+    public void drawCarpet(Pane root, int x, int y, int side) {
         int subSide = side / 3;
         Rectangle rectangle = new Rectangle(x + subSide, y + subSide, subSide, subSide);
 
